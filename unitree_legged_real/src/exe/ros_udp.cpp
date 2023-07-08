@@ -77,7 +77,7 @@ long low_count = 0;
 
 void highCmdCallback(const unitree_legged_msgs::HighCmd::ConstPtr &msg)
 {
-    printf("highCmdCallback is running !\t%ld\n", ::high_count);
+    //printf("highCmdCallback is running !\t%ld\n", ::high_count);
 
     custom.high_cmd = rosMsg2Cmd(msg);
 
@@ -87,13 +87,13 @@ void highCmdCallback(const unitree_legged_msgs::HighCmd::ConstPtr &msg)
 
     pub_high.publish(high_state_ros);
 
-    printf("highCmdCallback ending !\t%ld\n\n", ::high_count++);
+    //printf("highCmdCallback ending !\t%ld\n\n", ::high_count++);
 }
 
 void lowCmdCallback(const unitree_legged_msgs::LowCmd::ConstPtr &msg)
 {
 
-    printf("lowCmdCallback is running !\t%ld\n", low_count);
+    //printf("lowCmdCallback is running !\t%ld\n", low_count);
 
     custom.low_cmd = rosMsg2Cmd(msg);
 
@@ -103,7 +103,7 @@ void lowCmdCallback(const unitree_legged_msgs::LowCmd::ConstPtr &msg)
 
     pub_low.publish(low_state_ros);
 
-    printf("lowCmdCallback ending!\t%ld\n\n", ::low_count++);
+    //printf("lowCmdCallback ending!\t%ld\n\n", ::low_count++);
 }
 
 int main(int argc, char **argv)
